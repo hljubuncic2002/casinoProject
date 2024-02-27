@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Supermercado One', cursive;
+    background-color: #333;
+    color: #fff;
+}
+
+.roulette {
+    --width: 10px; 
+    --radius: 500px; 
+    --cont: calc(360deg / 12);
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--radius);
+    height: var(--radius);
+    position: relative;
+    margin: 3rem auto;
+    border: 5px solid #fff;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.roulette::before {
+    content: '';
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.roulette_item {
+    width: var(--width);
+    height: calc(var(--radius) / 2);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: calc(50% - var(--width) / 2);
+    transform-origin: 50% 100%;
+    background-color: transparent;
+    border-left: calc(var(--width) / 2) solid transparent;
+    border-right: calc(var(--width) / 2) solid transparent;
+    border-top: calc(var(--radius) / 2) solid red;
+    text-align: center;
+}
+
+.roulette_item:nth-child(odd) {
+    border-top: calc(var(--radius) / 2) solid black;
+}
+
+.roulette_number {
+    font-size: 15px;
+    width: var(--width);
+    display: block;
+    position: absolute;
+    top: calc(var(--radius) / -2);
+    left: calc(var(--width) / -2);
+    transform: scale(1, 1.5);
+    padding-top: 20px;
+}
+
+
+.roulette_item:nth-child(1) {
+    transform: rotateZ(0deg);
+}
+
+.roulette_item:nth-child(2) {
+    transform: rotateZ(30deg);
+}
+
+.roulette_item:nth-child(3) {
+    transform: rotateZ(60deg);
+}
+
+.roulette_item:nth-child(4) {
+    transform: rotateZ(90deg);
+}
+
+.roulette_item:nth-child(5) {
+    transform: rotateZ(120deg);
+}
+
+.roulette_item:nth-child(6) {
+    transform: rotateZ(150deg);
+}
+
+.roulette_item:nth-child(7) {
+    transform: rotateZ(180deg);
+}
+
+.roulette_item:nth-child(8) {
+    transform: rotateZ(210deg);
+}
+
+.roulette_item:nth-child(9) {
+    transform: rotateZ(240deg);
+}
+
+.roulette_item:nth-child(10) {
+    transform: rotateZ(270deg);
+}
+
+.roulette_item:nth-child(11) {
+    transform: rotateZ(300deg);
+}
+
+.roulette_item:nth-child(12) {
+    transform: rotateZ(330deg);
+}
